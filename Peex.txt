@@ -1,0 +1,1337 @@
+**********
+DevOps - Security
+##########
+Automate security testing in pipelines and repositories
+Description
+Integrate automated security checks into CI/CD pipelines and source code repositories to detect vulnerabilities early in the development process. Implement practices such as SAST, DAST, dependency and container scanning, and configure repository security features like access controls, code scanning, and secret detection.
+Outcomes
+Delivered pipelines and repository configurations with automated security tests and policies, ensuring continuous monitoring and mitigation of vulnerabilities throughout the development lifecycle.
+##########
+Configure and manage role-based access controls (RBAC) Key
+Description
+Configure and manage role-based access controls to ensure secure and least-privilege access to systems and services. Define and apply roles and permissions for users, groups, and service identities across infrastructure platforms, cloud environments, and critical tools. Regularly review and adjust access policies to maintain compliance with security best practices.
+Outcomes
+Implemented RBAC policies in at least one system (e.g., cloud IAM, Kubernetes, database, CI/CD, SCM, or equivalent).
+Configuration artifacts or policy definitions showing applied roles and permissions.
+Evidence of access reviews or audits confirming enforcement of least-privilege principles.
+##########
+Implement and manage application traffic security controls
+
+3
+Request NEBo Mentor
+Description
+
+Configure and maintain security controls for application traffic by applying WAF rules, firewall policies, IDS/IPS systems, and network traffic monitoring. Ensure applications are protected from threats such as unauthorized access, DDoS attacks, and data exposure through proactive filtering and monitoring.
+
+Outcomes
+
+Implemented firewall and WAF configurations along with traffic monitoring solutions, demonstrating effective protection of web applications and network communication.
+##########
+Implement and manage multi-factor authentication for secure access control
+
+4
+Request NEBo Mentor
+Description
+
+Implement, configure, and maintain multi-factor authentication (MFA) as part of secure access control. Ensure MFA is enforced across relevant systems such as cloud services, identity providers, source control platforms, or critical infrastructure. Contribute to policy enforcement and monitor compliance to reduce risks from compromised credentials.
+
+Outcomes
+
+Configured MFA settings or policies within an identity provider, cloud platform, SCM, or equivalent system.
+Documentation or configuration artifacts (e.g., access policies, enforcement rules) demonstrating MFA implementation.
+Evidence of compliance monitoring (e.g., reports, logs, or dashboards confirming MFA adoption).
+##########
+**********
+DevOps - Databases
+##########
+Configure and maintain in-memory data solutions
+
+7
+Request NEBo Mentor
+Description
+
+Provision and configure in-memory data services such as Redis, Cassandra, or cloud-native caching solutions with the required network and service settings. Manage user access, permissions, and integrations to support high-performance data processing and caching needs.
+
+Outcomes
+
+Provisioned and maintained in-memory services with proper configuration, user management, and connectivity for application workloads. (e.g. Redis, Cassandra, Azure Cache, Memorystore).
+
+NEBo Tasks
+
+DevOps - Configure and maintain in-memory data solutions
+Task Description
+
+This task covers provisioning and configuring in-memory data services such as Redis, Memcached, or cloud-native caching solutions. It includes configuring network access restrictions, authentication, persistence options (where applicable), security controls, and application integration for high-performance caching and data processing needs. The solution must demonstrate correct deployment, secure access, and successful operation of an in-memory data service
+
+Prerequisites
+
+Access to cloud provider account or local infrastructure
+Understanding of caching concepts and in-memory databases
+Redis CLI or equivalent client tools
+Basic understanding of key-value operations
+Sample application for cache integration (optional)
+Network configuration knowledge
+Guidance and Tips
+
+Environment: Use cloud provider free-tier or trial (Azure Cache for Redis, AWS ElastiCache, GCP Memorystore) or local Redis installation
+Time Planning: Plan around 6-8 hours for provisioning, configuration, testing, and connection validation
+Scope: Deploy Redis or Memcached, configure authentication, test basic operations, configure network access
+Tips: Understand difference between Redis and Memcached. Enable authentication/TLS for Redis. Test connection from application. Monitor cache hit rates. Document use cases and configuration
+Acceptance Criteria
+
+Functional Requirements 
+
+In-memory database instance provisioned (Redis, Memcached, or equivalent)
+Database accessible only from authorized sources (VPC/VNet restriction)
+Authentication configured and tested
+Successful connection from authorized client
+Basic operations verified (SET, GET, DEL, INCR)
+Data persistence configured (if using Redis)
+Connection tested from application or CLI client
+Non-Functional Requirements 
+Network access properly restricted
+Authentication required for connections
+TLS/SSL enabled for data in transit
+Appropriate instance sizing for workload
+Monitoring enabled for performance metrics
+Outcome Artifacts
+
+Screenshots of provisioned in-memory database showing configuration
+Network configuration showing restricted access
+Authentication/security configuration
+Terminal output showing successful connection
+Commands demonstrating basic operations (SET, GET, etc.)
+Connection string documentation (credentials redacted)
+Performance metrics or monitoring configuration
+Short README documenting: database type, use cases, connection details, and operational procedures
+Vendor Annex
+
+AWS ElastiCache (Redis) 
+
+Typical Tools: AWS ElastiCache, Redis CLI, AWS CLI
+
+References:
+
+ElastiCache for Redis
+
+ElastiCache for Redis
+
+Key Commands:
+
+aws elasticache create-cache-cluster ...
+redis-cli -h <endpoint> --tls -a <auth-token>
+redis-cli INFO memory
+Azure Cache for Redis 
+
+Typical Tools: Azure Cache for Redis, Redis CLI, Azure CLI
+
+References:
+
+Azure Cache for Redis documentation
+
+Quickstart guide
+
+Key Commands:
+
+az redis create ...
+az redis list-keys ...
+redis-cli -h <host> -p 6380 --tls -a <key>
+GCP Memorystore for Redis
+
+Typical Tools: GCP Memorystore, Redis CLI, gcloud
+
+References:
+
+Memorystore for Redis
+
+Quickstart
+
+Key Commands:
+
+gcloud redis instances create <name> ...
+gcloud redis instances describe <name>
+redis-cli -h <instance-ip> -p 6379
+##########
+Implement and support automated database migration processes
+
+2
+Request NEBo Mentor
+Description
+
+Implement, improve, and support automated processes for migrating databases across environments or to cloud platforms. Ensure migration workflows include both data and configurations, minimize downtime, and preserve data integrity.
+
+Outcomes
+
+• Automated migration scripts or pipelines that handle schema/configuration and data.
+
+• Documentation of migration steps, rollback or recovery procedures, and validation checks.
+
+• Evidence of successful execution of migrations between environments or to a cloud platform.
+##########
+Maintain and troubleshoot database services
+
+3
+Request NEBo Mentor
+Description
+
+Perform regular maintenance and troubleshooting of database infrastructure, including monitoring, configuration adjustments, and resolving performance or availability issues. Participate in tasks such as migrations, upgrades, and incident resolution.
+
+Outcomes
+
+Documented maintenance and troubleshooting activities (a ticket), covering configuration changes, issue resolution, and database migrations.
+##########
+**********
+DevOps - Network
+##########
+Implement and manage load balancing solutions
+Key
+
+9
+Request NEBo Mentor
+Description
+
+Configure and manage load balancers to distribute client requests across multiple application servers using predefined routing algorithms. Apply appropriate load balancing types (e.g., application, network, global, or gateway).
+
+Outcomes
+
+Created and configured load balancing solutions with efficient request distribution and support for features such as SSL offloading and traffic routing.
+
+NEBo Tasks
+
+DevOps - Implement and manage load balancing solutions
+Task Description
+
+This task covers configuring and managing load balancing solutions that distribute client requests across multiple application servers using appropriate routing algorithms and health checks. The work includes deploying application load balancers, network load balancers, or global load balancers; configuring SSL/TLS termination; implementing routing rules such as path-based or host-based routing; and validating automatic failover and request distribution. The solution must demonstrate an operational, production-grade load balancing setup capable of handling failures, scaling demands, and enforcing secure communication.
+
+Prerequisites
+
+Access to cloud provider account with load balancing services
+Multiple application instances or containers for backend
+Understanding of OSI model (Layer 4 vs Layer 7)
+SSL/TLS certificates (for HTTPS)
+DNS domain for testing (optional)
+Understanding of load balancing algorithms
+Guidance and Tips 
+
+Environment: Use cloud provider load balancing services (AWS ALB/NLB, Azure Load Balancer, GCP Load Balancer)
+Time Planning: Plan around 8-12 hours for load balancer setup, backend configuration, health checks, and testing
+Scope: Implement one load balancer type with multiple backends, health checks, and traffic routing
+Grade C Tips: Understand when to use Layer 4 vs Layer 7. Configure health checks properly. Test failover scenarios. Implement SSL termination. Monitor load distribution. Document routing decisions
+Acceptance Criteria
+
+Functional Requirements 
+
+A load balancer is created and configured using the appropriate type for the application workload.
+Multiple backend instances, with a minimum of two, are registered with the load balancer.
+Health checks are configured and actively monitor backend instance health.
+Traffic is distributed across all healthy backend instances according to the routing configuration.
+Backend instances that fail health checks are automatically removed from the active rotation.
+SSL or TLS termination is configured when using an application-layer load balancer.
+Routing rules such as path-based routing or host-based routing are implemented and validated.
+Connectivity tests confirm that requests are routed correctly under normal conditions and during backend failures.
+Monitoring and logging are enabled to observe load balancer performance and traffic behavior.
+Non-Functional Requirements 
+
+Traffic distribution remains balanced according to the selected routing algorithm.
+Health checks detect backend failures quickly to minimize disruption.
+SSL or TLS certificates used by the load balancer are properly configured, valid, and secure.
+The load balancer handles traffic spikes or increased request volume without service degradation.
+Configuration follows security best practices, including limiting exposure of management interfaces and enforcing encrypted communication.
+Documentation clearly describes load balancer architecture, routing rules, health check logic, and operational considerations.
+Routing decisions remain predictable and consistent across deployments.
+Changes to configuration are maintainable and traceable through version control.
+Outcome Artifacts
+
+Load balancer configuration showing type and settings
+Backend target group/pool configuration
+Health check configuration and status
+SSL certificate configuration (if applicable)
+Routing rules configuration
+Monitoring showing traffic distribution across backends
+Test results showing failover when backend becomes unhealthy
+Performance metrics or load testing results
+Short README documenting: architecture, routing logic, health check settings, and operational procedures
+Vendor Annex
+
+AWS Load Balancing (ALB/NLB)
+
+Typical Tools: AWS ALB, NLB, Target Groups, AWS CLI
+
+References:
+
+Application Load Balancer
+
+Network Load Balancer
+
+Key Commands:
+
+aws elbv2 create-load-balancer ...
+aws elbv2 create-target-group ...
+aws elbv2 register-targets ...
+aws elbv2 create-listener ...
+Azure Load Balancer & Application Gateway
+
+Typical Tools: Azure Load Balancer, Application Gateway, Azure CLI
+
+References:
+
+Azure Load Balancer
+
+Azure Application Gateway
+
+Key Commands:
+
+az network lb create ...
+az network lb probe create ...
+az network lb rule create ...
+az network application-gateway create ...
+GCP Load Balancing
+
+Typical Tools: GCP HTTP(S) Load Balancer, TCP/UDP Load Balancer, gcloud CLI
+
+References:
+
+GCP Load Balancing Overview
+
+Key Commands:
+
+gcloud compute instance-groups create ...
+gcloud compute health-checks create ...
+gcloud compute backend-services create ...
+gcloud compute forwarding-rules create ...
+Non-Cloud / On-Prem Load Balancing
+
+Typical Tools: Nginx, HAProxy, Envoy
+
+References:
+
+Nginx Load Balancing Guide
+
+HAProxy Documentation
+
+Key Commands:
+
+nginx -t && nginx -s reload
+haproxy -f /etc/haproxy/haproxy.cfg -c
+systemctl restart nginx
+##########
+**********
+DevOps - Observability
+##########
+Develop and automate monitoring runbooks for operational efficiency
+
+6
+Request NEBo Mentor
+Description
+
+Design and implement monitoring runbooks that define sequential steps. Runbooks can contain routine reactions such as restarting services, executing scripts, or validating connectivity.
+
+Outcomes
+
+Monitoring runbooks or sequential reactions setup for existing environment.
+##########
+Develop and maintain monitoring dashboards
+
+7
+Request NEBo Mentor
+Description
+
+Create and maintain monitoring dashboards to organize metrics and logs into meaningful views and train team members to effectively use dashboards for operational awareness.
+
+Outcomes
+
+Delivered monitoring dashboards that reflect the real-time state of infrastructure and applications.
+
+NEBo Tasks
+
+DevOps - Develop and maintain monitoring dashboards
+Task Description
+
+Develop, standardize, and maintain monitoring dashboards that provide actionable visibility into service health, performance, reliability, and capacity. The dashboards must support day-to-day operations (ex.: triage, incident response, release verification) and ongoing improvement (ex.: SLO tracking, trend analysis, capacity planning). The work includes selecting relevant signals, building dashboards with consistent structure and naming, validating correctness of queries/metrics, and implementing a maintenance process.
+
+Prerequisites
+
+Monitoring stack is already deployed and collecting relevant telemetry (metrics and optionally logs/traces).
+Metric naming and labeling standards exist or are defined (service name, environment, instance/pod, region/zone).
+Access to the monitoring platform (Grafana/CloudWatch/Azure Monitor/GCP Monitoring/etc.) with permissions to create/edit dashboards
+Service instrumentation exists for key application metrics (HTTP status codes, request duration, queue depth, custom KPIs)
+Alerting strategy/SLO definitions exist
+Guidance and Tips
+
+Start from the user journey: what an on-call engineer needs in the first 5 minutes of an incident
+Prefer “overview first, details on demand”: top row shows health/SLO, then breakdowns and diagnostics
+Normalize units and panel naming. Use percentiles for latency (p50/p95/p99) and pair them with traffic and errors.
+Avoid expensive queries:
+Use recording rules (Prometheus) or pre-aggregations where feasible.
+Limit high-cardinality dimensions in default views; provide drilldowns for deep breakdowns.
+Add annotations/markers: deployments, scaling events, incidents, config changes.
+Use templates/variables: env, service, namespace, cluster, region; ensure sensible defaults.
+Document “how to read” for each dashboard: what normal looks like, what actions to take when abnormal.
+Establish a review loop: after each major incident or release, update dashboards based on what was missing.
+Acceptance Criteria
+
+Functional Requirements 
+
+Provide at least 3 dashboards.
+Service Overview (high-level health and SLO/SLA posture)
+Service Performance (latency, throughput, errors, saturation)
+Infrastructure/Dependencies (compute/container, datastore, queue, third-party, etc.)
+Each dashboard includes:
+Time range controls and consistent refresh interval
+Environment selector (at minimum: prod + non-prod)
+Service selector (if multiple services exist)
+Links or navigation to related dashboards/runbooks
+Dashboard panels must include, at minimum:
+Golden Signals (or equivalent): latency, traffic, errors, saturation
+Availability/health checks (synthetic or endpoint health)
+Resource consumption for the service runtime (CPU, memory, restarts, disk/network if relevant)
+Dependency health (database, cache, messaging, upstream/downstream services, third-party)
+Each panel query is validated by:
+Verifying expected units and labels (ms vs s, %, bytes, req/s)
+Cross-checking at least 3 representative time windows (e.g., last 15m, 24h, 7d).
+Non-Functional Requirements 
+
+Dashboards load within 5 sec for default time range under normal backend load
+Queries avoid high-cardinality explosions; panels use appropriate aggregation and downsampling
+Consistent naming, panel layout, units, and label usage across dashboards
+Dashboards and variables must not expose secrets, PII, or sensitive identifiers beyond approved scopes
+Access to dashboard editing is restricted; view access aligned to team policy
+Dashboards are reproducible in a new environment using the stored configuration and documented prerequisites.
+Outcome Artifacts
+
+Screenshots (or exports) of each dashboard showing:
+
+Overview dashboard with Golden Signals and SLO/SLA panel
+Performance dashboard with latency percentiles and error breakdown
+Dependency/infrastructure dashboard with saturation and resource views
+Exported dashboard definitions (JSON/YAML) committed to repository, with link/path.
+A short README including:
+
+Dashboard inventory and purpose
+Variable definitions and expected labels
+Query validation notes (units, sources, assumptions)
+Demonstration notes or short recording showing:
+
+Drilldown from a panel to logs/traces/dependency view
+Use of variables (env/service)
+Example of identifying a known event (deploy marker) on charts
+Vendor Annex
+
+Prometheus + Grafana
+
+Prometheus, Alertmanager (optional), Grafana, exporters
+
+Implementation notes:
+
+Use recording rules for latency/error rate aggregations
+
+Grafana variables: cluster, namespace, service, pod
+
+Standard panels: rate(req), rate(err), histogram_quantile for latency, saturation via CPU throttling/memory working set
+
+AWS CloudWatch
+
+CloudWatch Dashboards, CloudWatch Metrics/Logs, Container Insights, Metrics Insights
+
+Implementation notes:
+
+Use widgets for ALB/ELB, ECS/EKS, RDS, SQS/SNS
+
+Add deployment markers via EventBridge/annotations approach
+
+Azure Monitor
+
+Azure Monitor Workbooks, Log Analytics, Application Insights
+
+Google Cloud Operations Suite
+
+Cloud Monitoring Dashboards, Cloud Logging, Error Reporting, Trace
+##########
+**********
+DevOps - Infrastructure as Code
+##########
+Contribute to design and architecture of configuration management systems
+Key
+
+7
+Request NEBo Mentor
+Description
+
+Participate in the design and architecture of configuration management systems by creating infrastructure diagrams, schemas, and CI/CD workflows for applying configuration changes. Collaborate with teams to align design decisions with current state, project needs, and automation best practices.
+
+Outcomes
+
+Delivered architecture diagrams, CI/CD schemas, and documented tasks reflecting contributions to configuration management design and implementation.
+
+NEBo Tasks
+
+DevOps - Contribute to design and architecture of configuration management systems
+Task Description
+
+Create an architecture document for introducing a Software Configuration Management (SCM) system such as Ansible, Puppet, Salt, or Chef into the current environment used by globally distributed development teams. The goal is to define the target architecture, operational model, rollout plan, and governance required to manage configuration at scale. The document must capture architectural decisions, estimates, constraints, quality attributes, and practical guidance for implementation and operations.
+
+Prerequisites
+
+An existing infrastructure or application environment that requires configuration management.
+Basic understanding of current configuration practices used in the project.
+Access to high-level system architecture and operational requirements.
+Availability of stakeholders or reference materials describing current pain points or gaps.
+Guidance and Tips
+
+Focus on design and architectural contribution rather than hands-on implementation.
+Identify configuration scope, ownership boundaries, and lifecycle stages.
+Propose how configurations are structured, versioned, tested, and promoted across environments.
+Address idempotency, consistency, drift detection, and rollback concepts.
+Consider security aspects such as secrets handling and access controls.
+Document assumptions, trade-offs, and constraints clearly.
+Align the proposed design with existing tooling and team capabilities.
+Acceptance Criteria
+
+Functional Requirements 
+
+Define an architecture vision describing the target state, system context, key components, integration points, and the rationale for selected SCM tooling.
+Provide high-level and component-level design diagrams that reflect environments, inventory model, control planes, execution nodes/agents, secrets handling, artifact storage, and CI/CD integrations.
+Document architectural decisions with decision records that include considered options, trade-offs, and final choices.
+Produce size, effort, schedule, and team estimates based on the proposed architecture, including skills required and RACI-style ownership.
+Include proposals covering technical scope relevant to the architect’s responsibilities such as module structure, code organization, branching/versioning strategy, and promotion across environments.
+Provide quantitative calculations and forecasts: estimated number of managed servers, capacity and performance expectations, infrastructure and licensing costs, run-time windows, rollout speed, and expected configuration drift reduction.
+Specify non-functional requirements and constraints: security, compliance, reliability, scalability, performance, operability, maintainability, portability, and tooling constraints already present in the organization.
+Define standards and guidelines for contributors: coding style for playbooks/manifests/states, testing approach, linting, secrets management, idempotency expectations, change review, naming conventions, and documentation rules.
+Create implementation and adoption roadmaps: phases, milestones, pilot scope, success metrics, rollout waves, deprecation plan for legacy scripts, and handover to operations.
+Outline verification and validation: unit tests, integration tests, canary or blue/green config rollout, pre-flight checks, drift detection, and rollback procedures.
+Provide a measurable set of success metrics and KPIs: mean time to configure, change failure rate, configuration compliance rate, drift detection mean time, and rollout duration.
+Non-Functional Requirements 
+
+The architecture document is complete, consistent, and free of ambiguities; diagrams accurately reflect described components and data flows.
+All recommendations align with security best practices including least privilege, encrypted secrets at rest and in transit, auditable changes, and policy-as-code where applicable.
+Design emphasizes idempotency, repeatability, modularity, and reusability of configuration artifacts across environments and teams.
+Estimates and cost models are transparent, with assumptions stated and sensitivity to scale documented.
+Operational considerations are included: monitoring, logging, alerting, SLOs for configuration runs, maintenance windows, backup and recovery for state and inventory.
+Compliance and governance are addressed: change control workflow, peer review, artifact signing, and traceability from request to applied change.
+Documentation is version-controlled and organized for easy consumption by engineering and operations; all templates and examples are runnable.
+The roadmap minimizes risk through staged adoption, pilots, rollback strategies, and clear entry/exit criteria for each phase.
+Outcome Artifacts
+
+Architecture or design document describing the configuration management approach.
+Diagram illustrating configuration flow, components, and responsibilities.
+Documented comparison or rationale for selected configuration management patterns or tools.
+Version-controlled design artifacts or review comments showing contribution.
+##########
+Implement automated availability and disaster recovery using infrastructure as code
+
+5
+Request NEBo Mentor
+Description
+
+Implement high availability (HA) and disaster recovery (DR) strategies through infrastructure-as-code and configuration management tools. Automate provisioning, validation, and recovery processes while ensuring changes are tested and aligned with defined RTO and RPO objectives.
+##########
+**********
+DevOps - CI/CD Engineering
+##########
+Adjust a branching strategy
+
+5
+Request NEBo Mentor
+Description
+
+Define and adjust a branching strategy that aligns with project requirements, team workflows, and release processes. Configure supporting practices such as code review rules and automated branch management within version control systems.
+
+Outcomes
+
+Implemented and documented a branching strategy (e.g., GitFlow, GitHub Flow, GitLab Flow, or trunk-based development) with supporting CI/CD and VCS configurations.
+##########
+Integrate automated security scans into continuous integration and deployment (delivery) flows
+
+7
+Request NEBo Mentor
+Description
+
+Incorporate automated security scanning tools, such as SAST, DAST, or dependency scanners, into CI/CD pipelines to detect vulnerabilities early in the development lifecycle. Ensure scans cover both code and artifacts to enforce security and compliance standards.
+##########
+Description
+
+Configure automated provisioning and teardown of testing environments with consistency and repeatability.
+
+Outcomes
+
+Implemented automated environment setup and cleanup within CI/CD pipelines.
+##########
+**********
+DevOps - Compute 
+##########
+Monitor virtual machine resource usage (Trainee)
+Key
+
+
+
+
+2
+Request NEBo Mentor
+Description
+
+Monitor resource usage on a virtual machine (VM) using available system monitoring tools or command-line utilities. Collect and review key performance metrics such as CPU utilization, memory usage, and general system health to understand current operating conditions. Capture the collected data for a defined period and record any noticeable changes or peaks without performing root-cause analysis.
+
+Outcomes
+
+Output or screenshots from monitoring tools or system commands.
+Recorded CPU and memory usage data for a defined time window.
+Short written summary (ticket, comment, or note) describing what metrics were collected, when and how they were collected, any visible changes or peaks observed.
+##########
+Perform capacity planning for virtual machines (Lead )
+
+5
+Request NEBo Mentor
+Description
+
+Develop and maintain resource planning for virtual machines by analyzing workload characteristics, monitoring utilization trends, and anticipating future demand. Use planning tools and telemetry to support sizing decisions and ensure implemented capacity aligns with business and technical expectations through regular audits.
+
+Outcomes
+
+Documented capacity plan or sizing model for virtual machines.
+Utilization reports or assessment outputs justifying chosen specifications.
+Audit or review confirming alignment between planned and implemented capacity.
+##########
+**********
+DevOps - Automation & Scripting
+##########
+Apply advanced query techniques to support infrastructure and operational tasks
+
+4
+Request NEBo Mentor
+Description
+
+Write and optimize complex queries using advanced techniques (e.g., joins, conditionals, aggregations, pattern matching, filtering) across SQL/NoSQL databases, analytics platforms, and logging systems. Use these queries to support infrastructure operations, troubleshooting, and performance analysis at the project level.
+
+Outcomes
+
+Delivered advanced query scripts that fulfilled project-level operational requirements (e.g., joins, aggregations, multi-source queries), integrated into infrastructure or operational workflows, and tracked through project tasks or tickets.
+##########
+Implement structured logging in automation and infrastructure scripts
+Key
+
+7
+Request NEBo Mentor
+Description
+
+Enhance automation and infrastructure scripts with structured logging. Apply multiple log levels, configurable settings, and clear documentation to provide meaningful insights for debugging, monitoring, and maintaining scripts in different environments.
+
+Outcomes
+
+Automation scripts with structured logging committed to version control and used in operational workflows or pipelines, providing meaningful logs (levels, configuration) for debugging and monitoring.
+
+NEBo Tasks
+
+DevOps - Implement structured logging in automation and infrastructure scripts
+Task Description
+
+This task covers enhancing an existing automation or infrastructure script, or creating a new one, by implementing structured logging, multiple log levels, and configuration-driven behavior. The script must emit both machine-readable and human-readable logs suitable for debugging, monitoring, and long-term maintenance across environments. Logging behavior must be adjustable without modifying code, ensuring maintainable and tunable observability for automation workflows
+
+Prerequisites
+
+Experience with one scripting/programming language (Python, Bash, PowerShell, Go, or Node.js)
+Local or sandbox environment for development and testing
+Git client and repository for version control
+Basic understanding of logging concepts (log levels, message formats) and configuration files (YAML, JSON, INI, environment variables)
+Basic understanding of functions, modularization, reusable components, and language style guidelines
+Guidance and Tips
+
+Environment: Use a local or sandbox environment where you can safely run and modify scripts. If using project code, ensure no sensitive data is logged and NDA rules are respected.
+Time Planning: Plan around 4–6 hours for refactoring the script, adding configuration and logging, testing different scenarios, and documenting the solution.
+Scope: Start with one meaningful script (e.g., deployment helper, backup script, health-check script, or infrastructure provisioning helper). Focus on end-to-end logging: initialization, main workflow, error paths, and external calls (APIs, databases, cloud CLIs).
+Tips: Aim for a clean separation between code, configuration, and logging. Make log levels and destinations configurable without changing code. Think about how other engineers would use your logs during incidents.
+Acceptance Criteria
+
+Functional Requirements 
+
+Script emits logs in a structured format such as JSON or clearly structured key-value text
+At least three log levels are used consistently (INFO, WARNING, ERROR, DEBUG or equivalents)
+Logging behavior such as log level, output format, or destination is configurable by file or environment variables
+At least one additional script setting such as endpoints, paths, or feature flags is configurable via file or environment variables
+Errors, failures, and unexpected conditions include meaningful context such as timestamps, operation names, parameters, or correlation identifiers
+Running the script with at least two different configurations produces different but correct logging outputs
+Non-Functional Requirements
+
+Logging failures are handled gracefully without causing script crashes
+Sensitive information such as passwords, secrets, tokens, or personal data is never logged or stored in configuration
+Documentation or README explains script purpose, log format, log levels, and configuration options
+Logging volume is appropriate for normal runs while DEBUG-level logging is available for troubleshooting without code changes 
+Outcome Artifacts
+Script source code in a Git repository demonstrating structured logging and configuration handling
+Configuration files (e.g., config.yaml, settings.json, .env) with non-sensitive example values
+Log output examples from at least two runs showing structured format, different log levels, and error handling
+Terminal output or screenshots confirming correct execution with multiple configuration profiles
+Short README documenting: script purpose, logging design, configuration options, and how to run the script
+Vendor Annex
+
+Python 
+
+Typical Tools: Python 3, logging, logging.config, optional python-json-logger
+
+References:
+
+Python Logging HOWTO
+
+Python logging.config
+
+python-json-logger
+
+Key Commands:
+
+python3 script.py --config config.yaml
+LOG_LEVEL=DEBUG python3 script.py
+Bash
+
+Typical Tools: Bash, logger, date, optional jq
+
+References:
+
+logger man page
+
+GNU Bash Reference Manual
+
+jq JSON processor
+
+Key Commands:
+
+./script.sh -c config.env
+LOG_LEVEL=INFO ./script.sh
+tail -f /var/log/your_script.log
+PowerShell
+
+Typical Tools: PowerShell 7+, Write-Verbose, Write-Information, Write-Warning, Write-Error, ConvertTo-Json
+
+References:
+
+PowerShell Documentation
+
+About Logging and Transcripts
+
+Advanced Functions
+
+Key Commands:
+
+.\script.ps1 -ConfigPath .\config.json -Verbose
+$env:LOG_LEVEL = "Debug"; .\script.ps1
+.\script.ps1 | ConvertTo-Json
+Non-Cloud / On-Prem
+
+Typical Tools: Linux shell, Python or Go helper scripts, syslog/journald, systemd or cron
+
+References:
+
+systemd-journald
+
+rsyslog Documentation
+
+crontab(5)
+
+Key Commands:
+
+APP_ENV=dev LOG_LEVEL=DEBUG ./infra_task.sh
+APP_ENV=test LOG_LEVEL=ERROR ./infra_task.sh
+journalctl -u infra-task.service
+tail -f /var/log/infra_task.log
+##########
+Perform refactoring and re-engineering of DevOps scripts and tools to improve quality, reliability, and maintainability
+
+5
+Request NEBo Mentor
+Description
+
+Refactor and enhance DevOps scripts and tools to align with project coding standards and best practices. Apply improvements such as input validation, output verification, unit testing, and linting to ensure quality, reliability, and maintainability.
+##########
+Review pull requests across the team to ensure code quality and standards compliance
+Key
+
+7
+Request NEBo Mentor
+Description
+
+Participate in the review of pull/merge requests to validate code quality, adherence to standards, and alignment with project requirements. Provide constructive feedback through version control platforms or ticketing systems to support continuous improvement.
+
+Outcomes
+
+Documented review comments in version control or task tracking systems.
+##########
+Use multiple programming and scripting languages in DevOps solutions
+
+5
+Request NEBo Mentor
+Description
+
+Apply more than one programming or scripting language to develop automation scripts and DevOps tools. Leverage the strengths of different languages (e.g., Python, Bash, PowerShell, Groovy, Golang) to address diverse project needs and workflows.
+
+Outcomes
+
+Produced solutions implemented in multiple languages(Python, Bash, Powershell, Groovy, Java, Golang, etc.), demonstrating flexibility and adaptability in DevOps automation.
+##########
+Write complex automation and scripts following best practices and vendor guidelines
+Key
+
+6
+Request NEBo Mentor
+Description
+
+Develop or refactor scripts for complex automation tasks using functions, objects, or classes where applicable. Follow vendor guidelines and best practices to ensure readability, maintainability, and long-term supportability.
+
+Outcomes
+
+Structured automation scripts (functions, classes, objects) committed to version control and used in operational workflows or pipelines, demonstrating adherence to vendor guidelines and best practices.
+
+NEBo Tasks
+
+DevOps - Write complex automation and scripts following best practices and vendor guidelines
+Task Description
+
+This task covers developing or refactoring a structured automation script using functions, modules, or classes where appropriate. The script must follow vendor recommendations and language-specific best practices to ensure readability, maintainability, and long-term supportability. It must automate a multi-step or complex operational task and provide configuration options suitable for use in workflows or pipelines. The solution must demonstrate scalable, secure, and maintainable automation
+
+Prerequisites
+
+Experience with one scripting/programming language (Python, Bash, PowerShell, Go, or Node.js)
+Local or sandbox environment for development and testing
+Git client and repository for version control
+Basic understanding of functions, modularization, reusable components, and language style guidelines
+Text editor or IDE and CLI shell access
+Guidance and Tips
+
+Environment: Use a local or sandbox environment to design, implement, and test the script.
+Time Planning: Plan around 6–8 hours for development, refactoring, testing, and documenting.
+Scope: Choose one complex automation scenario such as deployment automation, pipeline helpers, multi-step workflows, infrastructure validation, or data processing.
+Tips: Focus on clear structure, proper error handling, parameterization, consistent formatting, and code reuse.
+Acceptance Criteria
+
+Functional Requirements 
+
+The script includes structured components such as functions, modules, or classes to organize logic.
+The script automates a multi-step or complex task from start to finish (for example: multi-file processing, orchestrating multiple APIs, multi-stage data transformation).
+The script supports configuration through command-line arguments, configuration files, or environment variables.
+The script implements error handling for common failure scenarios (for example: missing inputs, failed external calls, permission errors).
+The script is stored in a Git repository and committed with meaningful commit messages.
+Non-Functional Requirements 
+
+The script follows vendor and language-specific style guidelines and coding conventions.
+Naming, formatting, and file structure are consistent and professional.
+The script is modular and reusable across different tasks or environments, with minimal duplication.
+Comments or documentation explain key logic, configuration options, and expected behavior.
+Hardcoded secrets are prohibited; secure configuration methods must be used for sensitive values.
+The script is designed so it can be updated or extended without breaking existing workflows or integrations.
+Performance is reasonable, and unnecessary resource consumption is avoided.
+Outcome Artifacts
+
+Full script file(s) showing structured implementation
+Git diff displaying the development or refactoring history
+Terminal output demonstrating script execution with various parameters
+Terminal output showing error-handling behavior for invalid inputs
+Usage examples showing parameters, config files, or environment variables
+Short README documenting: script purpose, workflow, how to run it, configuration details, and best practices applied
+Vendor Annex
+
+Python
+
+Typical Tools: Python 3.x, virtual environments, argparse, logging, modules/packages
+
+References:
+
+PEP 8 Style Guide
+
+Python Packaging Guide
+
+Python Functions Tutorial
+
+Key Commands:
+
+python3 main.py --config config.yaml
+pytest
+pip install -r requirements.txt
+Bash 
+
+Typical Tools: Bash functions, shell modules, set -euo pipefail, shellcheck
+
+References:
+
+Google Shell Style Guide
+
+ShellCheck Documentation
+
+Key Commands:
+
+./script.sh --mode deploy
+shellcheck script.sh
+PowerShell 
+
+Typical Tools: Advanced functions, modules, structured error handling (try/catch), Pester
+
+References:
+
+PowerShell Coding Guidelines
+
+About Functions Advanced
+
+Pester Framework
+
+Key Commands:
+
+.\Run-Task.ps1 -ConfigPath .\config.json
+Invoke-Pester
+##########
+**********
+DevOps - Containers
+##########
+Implement and manage autoscaling for containerized workloads
+
+8
+Request NEBo Mentor
+Description
+
+Design, configure, and maintain autoscaling mechanisms for containerized environments. This includes implementing node autoscaling, configuring container resource limits, and enabling container autoscaling based on documented application requirements and workload demand. The solution should adapt dynamically to traffic fluctuations while optimizing resource utilization across different container platforms.
+
+Outcomes
+
+Manifest file including the autoscaling options based on the documented application requirements analysis
+
+Kubernetes cluster autoscaler configuration based on the requirements of the application. This should also include containers' resource limits configuration.
+
+NEBo Tasks
+
+DevOps - Implement and manage autoscaling for containerized workloads
+Task Description
+
+This task covers designing, configuring, and maintaining autoscaling mechanisms for containerized environments. This includes implementing Horizontal Pod Autoscaler (HPA), Vertical Pod Autoscaler (VPA) if applicable, and cluster autoscaler for node scaling. The work involves configuring container resource requests and limits, enabling autoscaling based on CPU, memory, or custom metrics, and ensuring that the system adapts dynamically to workload demand while optimizing resource usage. The solution must demonstrate both pod-level and node-level scaling behaviors. This task confirms the ability to implement production-grade autoscaling for containerized workloads.
+
+Prerequisites
+
+Kubernetes cluster (cloud-managed preferred for cluster autoscaler)
+Metrics Server installed
+kubectl configured
+Understanding of Kubernetes resources and HPA concepts
+Sample application that can generate load
+Monitoring tools (Prometheus/Grafana recommended)
+Guidance and Tips
+
+Environment: Use cloud-managed Kubernetes (EKS, AKS, GKE) for full cluster autoscaler support
+Time Planning: Plan around 12-16 hours for autoscaler configuration, testing, and monitoring setup
+Scope: Implement HPA for pods, cluster autoscaler for nodes, and demonstrate scaling under load
+Grade C Tips: Start with CPU-based HPA, progress to custom metrics. Test both scale-out and scale-in. Monitor scaling behavior. Document resource requirements analysis. Set appropriate limits to prevent runaway scaling
+Acceptance Criteria
+
+Functional Requirements
+
+A Horizontal Pod Autoscaler is configured using appropriate metrics (for example, CPU, memory, or custom metrics).
+HPA scale-out behavior is demonstrated under load (pods increase when thresholds are exceeded).
+HPA scale-in behavior is demonstrated when load decreases (pods decrease once thresholds return to normal).
+A cluster autoscaler is configured and demonstrates:
+Node additions when pods are pending due to insufficient capacity.
+Node removals when nodes are underutilized and workloads can be rescheduled.
+Resource requests and limits are properly configured to ensure accurate autoscaling decisions.
+Scaling behavior is monitored and visualized using dashboards or monitoring tools (for example, Prometheus/Grafana or cloud-native monitoring).
+Non-Functional Requirements
+
+Scaling respects application requirements and SLAs, ensuring workloads remain available and performant during scaling events.
+Resource utilization is optimized through appropriate scaling thresholds and resource definitions.
+Scaling decisions are based on meaningful, well-calibrated metrics and avoid instability.
+Cooldown periods, stabilization windows, or equivalent mechanisms are applied to prevent thrashing.
+Cost optimization principles are followed, ensuring unnecessary scaling actions are avoided.
+Autoscaling configuration and observed behavior are documented clearly, including rationale for chosen thresholds.
+Outcome Artifacts
+
+HPA configuration YAML showing metrics and thresholds
+Cluster autoscaler configuration
+Resource requests/limits in pod specifications
+Load testing script or tool configuration
+Monitoring graphs showing pod count changes during load test
+Monitoring graphs showing node count changes
+Screenshots of scaling events in cluster
+Documentation of scaling behavior and tuning decisions
+Short README documenting: autoscaling strategy, metrics used, testing procedures, and optimization recommendations
+Vendor Annex
+
+Kubernetes HPA Example
+
+Typical Tools: Kubernetes HPA, Metrics Server, kubectl
+
+References:
+
+HPA documentation
+
+HPA walkthrough
+
+Key Commands:
+
+kubectl apply -f hpa.yaml
+kubectl get hpa
+kubectl top pods
+Custom Metrics HPA with Prometheus
+
+Typical Tools: Prometheus, Prometheus Adapter, Custom Metrics API
+
+References:
+
+Custom metrics
+
+Prometheus Adapter
+
+Key Commands:
+
+kubectl apply -f custom-metrics-hpa.yaml
+kubectl get --raw /apis/custom.metrics.k8s.io/
+AWS EKS Cluster Autoscaler
+
+Typical Tools: Cluster Autoscaler, AWS Auto Scaling Groups
+
+References:
+
+EKS Cluster Autoscaler
+
+Key Commands:
+
+kubectl apply -f cluster-autoscaler-autodiscover.yaml
+kubectl -n kube-system edit deployment cluster-autoscaler
+Azure AKS Cluster Autoscaler
+
+Typical Tools: AKS Cluster Autoscaler
+
+References:
+
+AKS Cluster Autoscaler
+
+Key Commands:
+
+az aks update --resource-group <rg> --name <cluster> --enable-cluster-autoscaler --min-count 1 --max-count 10
+GCP GKE Cluster Autoscaler
+
+Typical Tools: GKE Cluster Autoscaler, Node Auto-provisioning
+
+References:
+
+GKE Cluster Autoscaler
+
+Key Commands:
+
+gcloud container clusters create <cluster> --enable-autoscaling --min-nodes 1 --max-nodes 10
+gcloud container clusters update <cluster> --enable-autoprovisioning
+##########
+Implement and manage secret management for containerized workloads
+Key
+
+12
+Request NEBo Mentor
+Description
+
+Design, configure, and maintain secret management solutions for containerized environments to ensure secure handling of sensitive data such as credentials, tokens, and keys.
+
+Outcomes
+
+Documented and configured secrets manager integration for containerized environment.
+
+NEBo Tasks
+
+DevOps - Implement and manage secret management for containerized workloads
+Task Description
+
+Implement and manage a secure secret management solution for containerized workloads. The goal is to externalize sensitive configuration data, such as credentials, API keys, and tokens from container images and manifests, ensuring they are securely stored, accessed, and rotated. This task focuses on integrating a secret management system with a container orchestration platform using a CSI (Container Storage Interface) driver or equivalent method, and validating secure runtime injection of secrets into applications.
+
+Acceptance Criteria
+
+Functional Requirements:
+
+A container orchestration environment (e.g., Kubernetes or equivalent) is deployed and operational.
+A secret management system is installed and configured (e.g., a cloud-managed secrets service or a vault-based solution).
+A secrets integration driver or plugin (e.g., CSI Secrets Store driver) is deployed and linked to the orchestration cluster.
+Secrets are created and securely stored in the secret management system, including:
+Application credentials (e.g., database username/password).
+
+API keys or tokens.
+
+Workload manifests (e.g., deployment YAML files or Helm charts) are updated to retrieve secrets securely at runtime, without hard-coding sensitive values.
+Secrets are mounted or injected into containers as environment variables or volumes.
+Access permissions for retrieving secrets are defined using least-privilege principles.
+Non-Functional Requirements:
+
+Secrets are encrypted at rest and in transit using strong encryption mechanisms.
+Access control follows role-based authorization and enforces audit logging for secret retrieval actions.
+Secret rotation processes are automated or easily repeatable, ensuring minimal manual handling.
+Secret management configuration avoids exposure of sensitive information in build logs, manifests, or version control repositories.
+A cleanup procedure is included to remove test secrets and revoke associated access roles after verification.
+##########
+Optimize and secure service-to-service network traffic in containerized environments
+
+6
+Request NEBo Mentor
+Description
+
+Design, configure, and maintain networking solutions to enable secure, efficient, and observable communication between services in containerized environments. This includes implementing container networking (e.g., Docker Compose networking, Kubernetes network plugins, or service meshes), applying traffic management policies, securing connectivity through encryption and access controls, and enabling observability of network flows.
+
+Outcomes
+
+Secured, and monitored network traffic between services in a cluster. Configured Load Balancers to secure and connect traffic between containerized services. Created a policy on a service that rate-limit all traffic to a version of a service from a specific origin.
+
+NEBo Tasks
+
+DevOps - Optimize and secure service-to-service network traffic in containerized environments
+Task Description
+
+This task covers designing, configuring, and maintaining networking solutions that enable secure, efficient, and observable communication between services in containerized environments. The work includes implementing container networking components (for example, Kubernetes CNI plugins or service meshes such as Istio or Linkerd), applying traffic management policies, enforcing mTLS for encrypted communication, restricting connectivity through network policies, and enabling observability of service-to-service traffic. This task confirms the ability to implement production-grade service mesh, traffic control, and network security for microservices.
+
+Prerequisites
+
+Kubernetes cluster
+Understanding of microservices networking and service mesh concepts
+kubectl and istioctl/linkerd CLI tools (if using service mesh)
+Sample multi-service application
+Understanding of network policies and security concepts
+Monitoring tools for traffic visualization
+Guidance and Tips
+
+Environment: Use Kubernetes cluster with Istio or Linkerd service mesh
+Time Planning: Plan around 16-20 hours for service mesh setup, policy configuration, security implementation, and testing
+Scope: Implement service mesh, configure traffic management, enable mTLS, create network policies, and demonstrate traffic control
+Grade C Tips: Start with simple service mesh installation. Enable mTLS incrementally. Test traffic policies thoroughly. Monitor service-to-service communication. Document security architecture comprehensively
+Acceptance Criteria
+
+Functional Requirements 
+
+A service mesh is deployed and configured (for example, Istio, Linkerd, or equivalent).
+Secure service-to-service communication is enabled using mTLS.
+Traffic management policies are implemented, including at least:
+Retry logic
+Request timeouts
+Circuit breaker or outlier detection
+Rate limiting is configured for at least one service.
+Network policies are implemented to restrict pod-to-pod communication, allowing only necessary flows.
+Service-to-service traffic is observable through metrics or traces (for example, mesh telemetry, distributed tracing).
+Load balancing is configured across service versions or pods.
+Non-Functional Requirements 
+
+A zero-trust networking model is applied, ensuring all service-to-service communication is explicitly authorized.
+All inter-service traffic is encrypted in transit via mTLS.
+Traffic management and security policies do not introduce significant latency or instability.
+Policies are maintainable, well-structured, and documented, including their purpose and expected behavior.
+Observability provides actionable insights into traffic behavior, latency, error rates, and policy enforcement.
+Outcome Artifacts
+
+Service mesh deployment configuration
+mTLS configuration showing encryption enabled
+Traffic management policy definitions (VirtualService, DestinationRule)
+Rate limiting policy with thresholds
+Network policy configurations
+Service mesh dashboard showing traffic flows
+Screenshots demonstrating policy enforcement (rate limiting triggered)
+Metrics showing encrypted traffic percentage
+Short README documenting: network architecture, security model, traffic policies, and operational procedures
+Vendor Annex
+
+Istio Service Mesh Example
+
+Typical Tools: Istio, kubectl, istioctl, Kiali, Jaeger
+
+References:
+
+Istio documentation
+
+Istio traffic management
+
+Istio security
+
+Key Commands:
+
+istioctl install --set profile=demo
+kubectl label namespace default istio-injection=enabled
+kubectl apply -f virtualservice.yaml
+Linkerd Service Mesh Example
+
+Typical Tools: Linkerd, linkerd CLI, Linkerd Viz
+
+References:
+
+Linkerd documentation
+
+Getting started
+
+Key Commands:
+
+linkerd install | kubectl apply -f -
+linkerd viz dashboard
+kubectl get pods -o yaml | linkerd inject -
+Kubernetes Network Policies
+
+Typical Tools: Kubernetes Network Policy, Calico, Cilium
+
+References:
+
+Network Policies
+
+Key Commands:
+
+kubectl apply -f deny-all.yaml
+kubectl apply -f allow-frontend-backend.yaml
+kubectl get networkpolicies
+##########
+**********
+DevOps - Storages
+##########
+Implement and manage data archiving and backup strategies (Middle)
+
+
+
+
+11
+Request NEBo Mentor
+Description
+
+Configure and maintain data archiving, backups, and versioning in storage services, ensuring alignment with retention policies and recovery requirements. Use automation tools, pipelines, or scheduling to streamline backup and archive operations.
+
+Outcomes
+
+Implemented archiving, versioning, and backup solutions for storage services, supported by automation scripts, pipelines, or built-in service features (e.g., lifecycle policies, cloud backup services).
+
+NEBo Tasks
+
+DevOps - Implement and manage data archiving and backup strategies
+Task Description
+
+This task covers configuring and maintaining data archiving, backup, and versioning solutions aligned with retention policies and recovery requirements. It includes implementing lifecycle policies, configuring automated backups, setting up snapshot schedules, and validating recovery procedures. The solution must demonstrate comprehensive data protection practices including automated retention, archive transitions, restore validation, and operational readiness
+
+Prerequisites
+
+Access to cloud provider account (AWS, Azure, GCP) or on-premise infrastructure
+Existing storage resources (S3 buckets, EBS volumes, Azure Storage, GCP buckets)
+Understanding of backup concepts (RPO, RTO, retention policies)
+CLI tools for chosen platform
+Test data for backup/restore validation
+Understanding of storage tiers and lifecycle management
+
+Guidance and Tips
+Environment: Use cloud provider free tier with lifecycle policies and backup services
+Time Planning: Plan around 10-12 hours for backup configuration, lifecycle setup, and recovery testing
+Scope: Implement automated backups for at least 2 resource types (e.g., S3 and EBS, or Blob and VM)
+Tips: Test restore procedures thoroughly. Document RPO/RTO requirements. Automate backup scheduling. Use lifecycle policies for cost optimization. Verify backup integrity. Document recovery procedures clearly
+Acceptance Criteria
+
+Functional Requirements
+
+An automated backup solution is configured for at least two different resource types (for example, storage, databases, file shares).
+Backup schedules follow a defined retention policy specifying frequency and duration.
+Lifecycle policies automatically transition data into archival or lower-cost tiers based on retention rules.
+Successful backup creation is verified for each protected resource type.
+A successful restore from backup is demonstrated, validating data integrity and completeness.
+Backup monitoring or alerting is configured to detect failures or anomalies.
+Recovery procedures are fully documented and tested end-to-end
+Non-Functional Requirements
+
+Backup configurations align with RPO (Recovery Point Objective) and RTO (Recovery Time Objective) requirements.
+Cost optimization is applied through appropriate selection of storage tiers and retention periods.
+Backup integrity verification is enabled, ensuring backups are usable before retention expiration.
+Retention policies adhere to compliance or organizational requirements.
+Recovery procedures are documented in a clear and reproducible manner.
+Automation minimizes manual intervention in both backup and retention workflows.
+Outcome Artifacts
+
+Backup plan/policy configuration showing schedule and retention
+Lifecycle policy configuration for archive transitions
+Screenshots of successful backup creation
+Screenshots showing data in archive storage tier
+Terminal output or screenshots of successful restore operation
+Backup monitoring dashboard or alerts configuration
+Test results showing recovered data integrity
+Documentation of RPO/RTO targets and how they're met
+Short README documenting: backup strategy, retention policies, recovery procedures, and testing results
+Vendor Annex
+
+AWS Backup & S3 Lifecycle
+
+Typical Tools: AWS Backup, S3 Lifecycle, EBS Snapshots, AWS CLI
+
+References:
+
+AWS Backup Documentation
+
+S3 Lifecycle Policies
+
+EBS Snapshots
+
+Key Commands:
+
+aws s3api put-bucket-lifecycle-configuration ...
+aws s3api get-bucket-lifecycle-configuration ...
+aws ec2 create-snapshot --volume-id <id>
+aws backup create-backup-plan --backup-plan ...
+aws ec2 copy-snapshot ...
+Azure Backup 
+
+Typical Tools: Azure Backup, Azure Storage Lifecycle, Azure CLI
+
+References:
+
+Azure Backup Documentation
+
+Blob Lifecycle Management
+
+Key Commands:
+
+az backup vault create ...
+az backup protection enable-for-vm ...
+az backup protection backup-now ...
+GCP Backup & Archive 
+
+Typical Tools: GCP Cloud Storage, Persistent Disk Snapshots, gcloud CLI
+
+References:
+
+GCP Storage Lifecycle
+
+Compute Engine Snapshots
+
+Key Commands:
+
+gsutil lifecycle set lifecycle.json gs://<bucket>
+gcloud compute disks snapshot <disk> --zone <zone>
+gcloud compute resource-policies create snapshot-schedule <name>
+On-Prem / Generic Backup 
+
+Typical Tools: BorgBackup, Restic, Veeam, rsync, cron
+
+References:
+
+Restic Documentation
+
+BorgBackup Documentation
+
+Key Commands:
+
+restic backup <path>
+restic snapshots
+rsync -avh <src> <dest>
+crontab -e
+##########
+Configure and control permissions for storage resources
+
+8
+Request NEBo Mentor
+Description
+
+Set up and manage access controls for storage services by defining object- or bucket-level permissions based on usage requirements. Configure ACLs or equivalent policies to ensure secure and controlled access to storage resources.
+##########
+Implement and automate data migration
+
+6
+Request NEBo Mentor
+Description
+
+Configure automated processes to migrate data from on-premises or other storage systems to the cloud. 
+
+Outcomes
+
+Delivered scripts or automated pipelines for data migration, with documented tasks covering transfers from on-premises to cloud storage environments.
+##########
+Select and apply diverse storage services for workload needs
+
+6
+Request NEBo Mentor
+Description
+
+Select different storage types based on workload purpose, such as archives, backups, images, or static website content.
+
+Outcomes
+
+Implemented storage solutions with different storage types (e.g., regular, archive, internal, or internet-facing) tailored to workload and project needs.
+##########
